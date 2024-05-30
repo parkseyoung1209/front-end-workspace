@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>피자배달</title>
+  </head>
+  <body>
+    <h1>주문하기</h1>
+    <form action="">
+      <div>
+        <label for="nickName">
+          고객명 :
+          <input type="text" name="userName" id="nickName" /> </label
+        ><br />
+        <label for="phoneNumber">
+          전화번호:
+          <input type="text" name="phone" id="phoneNumber" /> </label
+        ><br />
+        <label for="" eMail>
+          이메일:
+          <input type="text" name="elcMail" id="eMail" />
+        </label>
+      </div>
+      <br />
+      <div>
+        <fieldset>
+          <legend>피자 사이즈</legend>
+          <input type="radio" name="size" id="small" value="smalL" />
+          Small<br /><br />
+          <input type="radio" name="size" id="medium" value="meDium" />
+          Medium<br /><br />
+          <input type="radio" name="size" id="large" value="larGe" />
+          Large
+        </fieldset>
+        <fieldset>
+          <legend>토핑 선택</legend>
+          <input type="checkbox" name="topping" id="bacon" value="bc" />
+          <label for="bacon">베이컨</label>
+          <input type="checkbox" name="topping" id="cheese" value="ches" />
+          <label for="cheese">치즈</label>
+          <input type="checkbox" name="topping" id="onion" value="oni" />
+          <label for="onion">양파</label>
+          <input type="checkbox" name="topping" id="mushroom" value="mr" />
+          <label for="mushroom">버섯</label>
+        </fieldset>
+      </div><br>
+      <div>
+        <label for="time">
+            희망 배송 시간: </label>
+            <input type="time" name="time" id="time">
+        </div><br<br>
+      <div>
+        <label for="memo">주문 시 요청사항: 
+        </label>
+            <textarea cols="40" rows="20" 
+            placeholder="내용을 입력하세요" 
+            name="needs" 
+            id="memo">
+        </textarea>
+        <button type="submit">주문하기</button>
+      </div>
+    </form>
+  </body>
+</html>
