@@ -1,0 +1,44 @@
+.square {
+  position: relative;
+  height: 800px;
+}
+#box {
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 10px;
+  position: absolute;
+  margin: ;
+}
+.animal {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+#panda {
+  background-image: url(../../resources/bao.jpg);
+  border-radius: 100%;
+  background-size: cover;
+}
+.textBox {
+  margin: 20px;
+}
+#spText {
+  font-size: 24px;
+  text-align: center;
+  color: white;
+}
+.linkbox {
+  width: 350px;
+  height: 50px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+#github {
+  text-align: center;
+}
+#youtube {
+  text-align: center;
+}
