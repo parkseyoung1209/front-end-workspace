@@ -1,44 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: indianred;
+  background: linear-gradient(purple, pink);
+  height: 100vh;
+  padding: 20px;
+}
 .square {
   position: relative;
-  height: 800px;
+  width: 100%;
 }
 #box {
   width: 400px;
   height: 400px;
   box-sizing: border-box;
   border: 2px solid white;
-  border-radius: 10px;
-  position: absolute;
-  margin: ;
+  border-radius: 30px;
+  /*position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 20px;*/
+  margin: auto;
+  text-align: center;
 }
 .animal {
   position: relative;
   width: 180px;
   height: 180px;
+  margin: 15px auto;
 }
 #panda {
   background-image: url(../../resources/bao.jpg);
   border-radius: 100%;
   background-size: cover;
-}
-.textBox {
-  margin: 20px;
+  background-position: center;
 }
 #spText {
   font-size: 24px;
-  text-align: center;
+  font-weight: bold;
   color: white;
 }
-.linkbox {
-  width: 350px;
-  height: 50px;
+.square a {
   border: 2px solid white;
-  box-sizing: border-box;
-  margin-bottom: 15px;
+  display: block;
+  margin: 15px;
+  height: 60px;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  padding: 12px;
+  text-decoration: none;
 }
-#github {
-  text-align: center;
+.pandaa img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 15px auto;
 }
-#youtube {
-  text-align: center;
+.square a:hover {
+  background-color: white;
+  color: aquamarine;
 }
