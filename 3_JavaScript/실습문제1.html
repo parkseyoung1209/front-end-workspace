@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수정본</title>
+  </head>
+  <body>
+    <!-- 
+      변수 명명 규칙
+      1) 변수명에는 문자, 숫자, 기호는 $, _만 사용 
+      2) 첫글자에는 숫자 금지
+      3) 예약어(const, if, switch, ...) 금지
+      4) 표기법대로 사용 - camelCase(낙타표기법)
+      5) 상수(const로 표시한 것 X)는 대문자 + snake_case(언더바 표기법)
+    -->
+
+    <!-- 
+        Q1. 킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오.
+           - 파운드 = 킬로그램 * 2.2
+           예) 킬로그램 : 60  
+     -->
+    <script>
+      const kg = 60;
+      const lb = kg * 2.2;
+      console.log(`킬로그램 : ${kg}`);
+      console.log(`파운드 : ${lb}`);
+    </script>
+
+    <!--
+        Q2. 제곱미터를 평으로 환산하여 console에 출력하시오.
+           - 평 = 제곱미터 * 0.3
+           예) 제곱미터 : 99
+    -->
+    <script>
+      const mTwo = 99;
+      const threeDotThree = mTwo * 0.3;
+      console.log(mTwo, "제곱미터=", threeDotThree + "평");
+    </script>
+
+    <!-- 
+        Q3. 사다리꼴의 넓이를 구하여 console에 출력하시오.
+           - 사다리꼴의 넓이 = (윗변 길이 + 밑변 길이) / 2 * 높이
+           예) 윗변 : 10, 밑변 : 14, 높이 : 4
+     -->
+    <script>
+      const width_top = 10;
+      const width_bottom = 14;
+      const height = 4;
+
+      console.log(
+        "윗변 :10, 밑변 :14, 높이 :4인 사다리꼴의 넓이=" +
+          ((width_bottom + width_top) / 2) * height
+      );
+    </script>
+
+    <!-- 
+        Q4. 정기예금을 은행에 예치했을 때 수령하는 월 이자를 계산하여 console에 출력하시오. 단, 년 이율은 4%로 가정한다. 
+           - 월 이자 = 정기 예금액 * 0.04 / 12
+           - 예) 정기 예금액 : 12,000,000
+    -->
+    <script>
+      const money = 12000000;
+      const monthMoney = (money / 12) * 0.4;
+      console.log(
+        `정기 예금액이 1200만원이라면 내 월 이자는 ${monthMoney}원이다`
+      );
+    </script>
+
+    <!-- 
+        Q5. 머쓱이는 55살인 선생님이 몇 년도에 태어났는지 궁금해졌다. 나이 age가 주어질 때, 2024년을 기준 출생 연도를 console에 출력하시오.
+     -->
+    <script>
+      const age = 55;
+      const birth_year = 2024 - age;
+      console.log(
+        `선생님의 나이는 ${age}살이고, 출생연도는 ${birth_year}년도입니다.`
+      );
+    </script>
+
+    <!-- 
+        Q6. 머쓱이는 추운 날에도 아이스 아메리카노만 마신다. 아이스 아메리카노는 한잔에 5,500원이다. 
+            머쓱이가 가지고 있는 돈이 15,000원 일 때, 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 console에 출력하시오.
+     -->
+    <script>
+      const myMoney = 15000;
+      const cost = 5500;
+      console.log(parseInt(myMoney / cost) + "잔");
+      console.log((myMoney % cost) + "원");
+    </script>
+
+    <!-- 
+      Q7. 머쓱이네 양꼬치 가게는 10인분을 먹으면 음료수 하나를 서비스로 준다. 양꼬치는 1인분에 12,000원, 음료수는 2,000원이다. 
+          양꼬치 64인분과 음료수 6개를 먹었다면 총얼마를 지불해야 하는지 console에 출력하시오.
+     -->
+    <script>
+      const lamb = 12000;
+      const coke = 2000;
+      const pics = 10;
+      const foodTotal = 64;
+      const cokeTotal = 6;
+
+      if (pics > 9) {
+        const freeCoke = 2000;
+        console.log(
+          lamb * foodTotal +
+            (coke * cokeTotal - freeCoke * parseInt(foodTotal / 10)) +
+            "원"
+        );
+      }
+    </script>
+  </body>
+</html>

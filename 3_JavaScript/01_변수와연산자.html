@@ -21,15 +21,114 @@
       console.log(varA); //100이 출력된다
       varA = "zzz";
       console.log(varA); // zzz
-      // 상수 -값을 수정할 수 없다
+
+      // 상수 -값을 수정할 수 없다, 사용빈도가 높다.
       const constB = 200; // const 변수명 = 값;
       console.log(constB); // 200
       //constB = 300; // Uncaught TypeError
-      // 변수 - 값을 수정할 수 있다
+
+      // 변수 - 값을 수정할 수 있다, 사용빈도가 낮다.
       let letC = 300; // let 변수명 = 값;
       console.log(letC); // 300
       letC = "xxx";
       console.log(letC); // xxx
+
+      // typeof : 데이터 타입 확인
+      console.log(typeof constB); //number
+      console.log(typeof letC); // string
+    </script>
+
+    <!-- 기본 데이터 타입-->
+    <!-- 문자열(string) -->
+    <script>
+      let message = '"안녕"이라고 말해보세요~';
+      //message = "＼"안녕"＼이라고 말해보세요~"
+      console.log(message);
+      console.log(message[8], message[4]);
+      console.log(message.length); //14
+
+      console.log("누군가에게", message);
+      console.log("누군가에게" + message);
+      console.log(`누군가에게 ${message}`);
+
+      const name = "서동문";
+      const age = 3;
+      //안녕? 내 이름은 서동문이고, 나이는 3살!
+      console.log("안녕? 내 이름은", name + "이고, 나이는", age + "살!");
+      console.log(`안녕? 내 이름은 ${name}이고, 나이는 ${age}살!`);
+      console.log("안녕? 내 이름은 " + name + "이고, 나이는 " + age + "살!");
+    </script>
+
+    <!--숫자-->
+    <script>
+      const num1 = 10;
+      const num2 = 3;
+      console.log(num1 + num2); //더하기:13
+      console.log(num1 - num2); //빼기:7
+      console.log(num1 * num2); //곱셈:30
+      console.log(num1 / num2); //나누기:3.333....
+      console.log(num1 % num2); // 나머지 값을 구함 : 1
+      console.log(num1 ** num2); // 제곱을 뜻함 : 1000
+
+      // 문자열 -> 숫자
+      console.log(typeof "100"); // string 출력
+      console.log(typeof Number("100"));
+      console.log(Number("Hello")); //NaN (Not a Number)
+
+      // 숫자 -> 문자열 : String()
+      console.log(typeof String(200)); // string
+
+      // 실수 -> 정수 (소수점 제외) : parseInt()
+      console.log(parseInt(1.8)); // 1
+    </script>
+    <!-- undefined, null-->
+    <script>
+      let test;
+      console.log(test); // undefinded - 정의되지 않음
+      test = null;
+      console.log(test); // null
+    </script>
+
+    <!-- Boolean과 비교 연산자-->
+    <script>
+      console.log(true);
+      console.log(false);
+      let num3 = 100;
+      let num4 = 200;
+      console.log(num3 < num4); // true
+      console.log(num3 >= num4); //false
+
+      num4 = 100;
+      num4 = "100";
+      console.log(num3 == num4); //true, 각각의 값이 같은가를 비교함
+      console.log(num3 != num4); //false, 각각의 값이 다른가를 비교함
+      console.log(num3 === num4); //false, 데이터 타입까지 체크함
+      console.log(num3 !== num4); //true, 이하동문
+
+      // 다른 데이터 타입 -> Boolean : Boolean()
+      // false : 0, NaN, "", null, undefined
+      // 나머지는 true
+      console.log(Boolean(0));
+      console.log(Boolean(null));
+      console.log(Boolean(num3 - num4));
+    </script>
+    <!--논리 연산자-->
+    <script>
+      const a = 100;
+      const b = 200;
+
+      // && -> AND(그리고) 연산자 - 두 값이 모두 true일 때만 true, 나머지는 false
+      console.log(a < 300 && a == 100); // true && true : true
+      console.log(a > 200 && b == 200); // false && true : false
+
+      // || : OR(또는) 연산자 - 하나라도 true면 true!
+      console.log(a > 250 || b == 200); // false||true:true
+      console.log(a > 200 || a != 100); // false||false:false
+
+      // ! : NOT(아니다)
+      console.log(!true); //false
+      console.log(!false); //true
+      console.log(!!(a > b)); //false
     </script>
   </body>
 </html>

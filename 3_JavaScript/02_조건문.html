@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>조건문</h1>
+    <!--
+        if(조건) {
+        } else {
+            조건이 false
+        }
+
+        else 생략 가능!
+        한 줄 표현! 삼항 연산자 : 
+        조건 ? 조건이 true : 조건이 false
+    -->
+    <script>
+      let age = 15; // age에 20이라는 값을 넣음
+      //age 값이 19보다 많다는 조건이 true 일 경우
+      //"성인"을 출력하라
+      //아니라면,(false)
+      //"미성년자"를 출력하라
+
+      if (age > 19) {
+        console.log("성인!");
+      } else {
+        console.log("미성년자!");
+      }
+
+      //삼항연산자로!
+      age = 20;
+      const result = age > 19 ? "성인" : "미성년자";
+      console.log(result);
+    </script>
+
+    <!-- else if : 여러개 사용 가능
+        if(조건 A) {
+            조건 A가 true일 경우
+        }else if(B){
+            조건 A가 false이며 B가 true일 경우
+        }else if(C){
+            조건 A, B가 false이면서 C가 true일 경우
+        }else {
+            모든 조건이 false인 경우
+        }
+    -->
+    <script>
+      age = 5;
+      if (age > 19) {
+        console.log("성인");
+      } else if (age > 13) {
+        // aeg > 13 && age <= 19 : 비추천!
+        console.log("미성년자");
+      } else if (age > 7) {
+        console.log("아동");
+      } else {
+        console.log("유아");
+      }
+    </script>
+  </body>
+</html>
