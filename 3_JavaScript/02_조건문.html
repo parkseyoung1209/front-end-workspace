@@ -60,5 +60,45 @@
         console.log("유아");
       }
     </script>
+
+    <!--
+      switch(데이터 값이 온다) {
+        case 조건 A : 
+            조건 A가 true
+            break;
+        case 조건 B :
+            조건 B가 true
+            break;
+        default :
+            모든 조건이 false
+      }
+    -->
+    <script>
+      const number = prompt("숫자를 입력하세요");
+      console.log("78번째 줄 >>" + number);
+
+      if (number <= 0) {
+        console.log("음수거나 0입니다");
+      } else if (number % 2 == 1) {
+        console.log("홀수입니다");
+      } else if (number % 2 == 0) {
+        console.log("짝수입니다.");
+      } else {
+        console.log("숫자가 아닙니다.");
+      }
+    </script>
+    <!--switch 문-->
+    <script>
+      switch (number % 2) {
+        case 0:
+          console.log("짝수");
+          break;
+        case 1:
+          console.log("홀수");
+          break;
+        default:
+          console.log("숫자가 아닙니다");
+      }
+    </script>
   </body>
 </html>

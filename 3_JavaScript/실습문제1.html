@@ -47,11 +47,9 @@
       const width_top = 10;
       const width_bottom = 14;
       const height = 4;
+      const trape = ((width_bottom + width_top) / 2) * height;
 
-      console.log(
-        "윗변 :10, 밑변 :14, 높이 :4인 사다리꼴의 넓이=" +
-          ((width_bottom + width_top) / 2) * height
-      );
+      console.log("윗변 :10, 밑변 :14, 높이 :4인 사다리꼴의 넓이=" + trape);
     </script>
 
     <!-- 
@@ -85,8 +83,10 @@
     <script>
       const myMoney = 15000;
       const cost = 5500;
-      console.log(parseInt(myMoney / cost) + "잔");
-      console.log((myMoney % cost) + "원");
+      const things = parseInt(myMoney / cost);
+      const charge = myMoney % cost;
+      console.log(things + "잔");
+      console.log(charge + "원");
     </script>
 
     <!-- 
@@ -94,19 +94,20 @@
           양꼬치 64인분과 음료수 6개를 먹었다면 총얼마를 지불해야 하는지 console에 출력하시오.
      -->
     <script>
-      const lamb = 12000;
-      const coke = 2000;
-      const pics = 10;
+      const lambCost = 12000;
+      const cokeCost = 2000;
+      const lambPics = 10;
       const foodTotal = 64;
       const cokeTotal = 6;
+      const service = parseInt(foodTotal / lambPics);
 
-      if (pics > 9) {
-        const freeCoke = 2000;
-        console.log(
-          lamb * foodTotal +
-            (coke * cokeTotal - freeCoke * parseInt(foodTotal / 10)) +
-            "원"
-        );
+      if (foodTotal >= 10) {
+        const price1 =
+          lambCost * foodTotal + (cokeCost * cokeTotal - cokeCost * service);
+        console.log(price1 + "원");
+      } else {
+        const price2 = lambCost * foodTotal + cokeCost * cokeTotal;
+        console.log(price2 + "원");
       }
     </script>
   </body>
