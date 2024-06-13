@@ -18,12 +18,18 @@
 
     <!-- Q2. 1 ~ 1000 정수 중 3의 배수의 합계를 출력하세요 -->
     <script>
-      for (let i = 3; i <= 1000; i += 3) {}
+      let result1 = 0;
+      for (let i = 3; i <= 1000; i += 3) {
+        result1 = result1 + i;
+      }
+      console.log(result1);
     </script>
 
     <!-- Q3. 문자열의 문자들을 하나씩 출력하세요 -->
     <script>
       const str = "안녕하세요. 반갑습니다!";
+      const sliceStr = str.split("");
+      console.log(sliceStr);
     </script>
 
     <!-- Q4. 배열 값 중 최대값을 출력하세요 -->
@@ -39,11 +45,23 @@
     <!-- Q6. 배열 안의 데이터를 모두 2배로 만들어서 출력하세요 -->
     <script>
       const nums2 = [1, 3, 5];
+      const nums2Array = nums2.map((value) => {
+        return value * 2;
+      });
+      console.log(nums2Array);
     </script>
 
     <!-- Q7. 배열에 있는 데이터들로 합계와 평균을 출력하세요 -->
     <script>
       const nums3 = [90, 85, 70, 86, 97];
+      const nums3Array1 = nums3.reduce((acc, value) => {
+        return acc + value;
+      }, 0);
+      const nums3Array2 = nums3.reduce((acc, value) => {
+        return acc + value / 5;
+      }, 0);
+      console.log(nums3Array1);
+      console.log(nums3Array2);
     </script>
 
     <!-- Q8. 두 배열의 각 데이터의 곱셈을 한 데이터들로 이루어진 새로운 배열을 생성하여 출력하세요 -->

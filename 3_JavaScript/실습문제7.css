@@ -1,0 +1,59 @@
+.textBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.imgBox {
+  display: flex;
+  justify-content: center;
+}
+#firstBox {
+  width: 250px;
+  height: 250px;
+  background-color: aliceblue;
+  margin: 30px;
+  border-radius: 50%;
+}
+#secondBox {
+  width: 250px;
+  height: 250px;
+  background-color: aliceblue;
+  margin: 30px;
+  border-radius: 50%;
+}
+#thirdBox {
+  width: 250px;
+  height: 250px;
+  background-color: aliceblue;
+  margin: 30px;
+  border-radius: 50%;
+}
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+#click {
+  width: 160px;
+  height: 60px;
+  margin: 15px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 24px;
+}
+#reset {
+  width: 160px;
+  height: 60px;
+  margin: 15px;
+  border-radius: 10px;
+  border: 0;
+  font-size: 24px;
+}
+#cong {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  font-size: 30px;
+  font-weight: 900;
+}

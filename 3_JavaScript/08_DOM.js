@@ -38,6 +38,8 @@ function btn6() {
 function btn7() {
   const test7 = document.querySelector("#testId2");
   test7.setAttribute("data-test", "테스트");
+  test7.setAttribute("data-test", "테스트2");
+  console.log(test7.getAttribute("data-test"));
 }
 function btn8() {
   const div = document.querySelector("#testId2");

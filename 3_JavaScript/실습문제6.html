@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>올해 남은 시간</h1>
+
+    <div id="result"></div>
+    <script>
+      function count() {
+        const date1 = new Date("2025-01-01 00:00:00");
+        const date2 = new Date();
+        const date3 = Math.floor(((date1 - date2) / 1000) % 60);
+        const date4 = Math.floor(((date1 - date2) / 60000) % 60);
+        const date5 = Math.floor(((date1 - date2) / 3600000) % 24);
+        const date6 = Math.floor(((date1 - date2) / 86400000) % 365);
+        result.innerHTML = `${date6}일 ${date5}시간 ${date4}분 ${String(
+          date3
+        ).padStart(2, "0")}초`;
+      }
+      count();
+      setInterval(count, 1000);
+    </script>
+  </body>
+</html>
