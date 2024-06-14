@@ -35,6 +35,17 @@
     <!-- Q4. 배열 값 중 최대값을 출력하세요 -->
     <script>
       const nums = [3, 7, 12, 5, 3];
+      /*const numsArray = Math.max(...nums);
+      console.log(numsArray);*/
+
+      let count = 0;
+
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > count) {
+          count = nums[i];
+        }
+      }
+      console.log(count);
     </script>
 
     <!-- Q5. 1 ~ 10 정수 중 소수(1과 자기자신)를 출력하세요
@@ -68,6 +79,20 @@
     <script>
       const a1 = [12, 0, 2, 5, 4];
       const b1 = [5, 15, 6, 7, 8];
+      // 답의 예시 : const c1 = [60, 0, 8, 35, 32];
+
+      // 1. 반복문을 돌려서 -> a1[i] * b1[*] <-- 새로운 배열에 추가 (push)
+      c1 = [];
+      for (let i = 0; i < a1.length; i++) {
+        c1[i] = a1[i] * b1[i];
+      }
+      console.log(c1);
+
+      // 2. 배열.map <-- 완전 새로운 배열로 만드는! 이건 한번 시도!!
+      /*const c1 = a1.map((value, index) => {
+        return value * b1[index];
+      });
+      console.log(c1); =>거의 배낀 수준이라 다시 물어봐야함*/
     </script>
 
     <!-- Q9. 두 배열의 데이터 값이 서로 같은 데이터들만 이루어진 새로운 배열을 생성하여 출력하세요

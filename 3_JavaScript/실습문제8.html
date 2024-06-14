@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="실습문제8.css" />
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for=>*아이디 : </label>
+        <input type="text" id="ct1" />
+        <span id="role1"
+          >첫글자는 반드시 영문자로 시작해 영문자 숫자 포함 4~12자로
+          입력하시오</span>
+      </div>
+      <div>
+        <label for=>*비밀번호 : </label>
+        <input type="password" id="ct2" />
+        <span id="role2"
+          >영문자, 숫자, 특수문자 포함하여 총 8~15자로 입력하시오.</span>
+      </div>
+      <div>
+        <label for=>*비밀번호 확인 : </label>
+        <input type="password" id="ct3" />
+        <span id="role3">비밀번호 확인</span>
+      </div>
+      <div>
+        <label for=>*이름: </label>
+        <input type="text" id="ct4" />
+        <span id="role4"
+          >한글로만 이루어져야되며 2글자 이상으로 입력하시오.</span>
+      </div>
+      <div>
+        <label for=>*이메일: </label>
+        <input type="text" id="ct5" />
+        <span id="role5"
+          >이메일 형식에 맞춰서 입력하시오.</span>
+      </div>
+      <div>
+        <label for=>*취미: </label>
+        <input type="text" id="ct6" placeholder="축구, 농구, 독서 등등.."/>
+        <span id="role6"></span>
+      </div>
+      <div>
+        <label for=>*거주지: </label>
+        <select id="ct7">
+            <option value="seoul">서울</option>
+            <option value="jeju">제주</option>
+            <option value="gyeonggi">경기</option>
+            <option value="busan">부산</option>
+            <option value="incheon">인천</option>
+        </select>
+      </div>
+      <button type="submit" id="sign">회원가입</button>
+      <button type="reset" id="reset">취소</button>
+    </form>
+    <script>
+    const ct1 = document.querySelector("#ct1");
+    const role1 = document.querySelector("#role1");
+    const role2 = document.querySelector("#role2");
+    const role3 = document.querySelector("#role3");
+    const ct3 = document.querySelector("#ct3")
+    ct1.addEventListener("input", function(){
+        let regExp = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
+      if (regExp.test(ct1.value)) {
+        role1.innerHTML = "사용 가능한 아이디 입니다!";
+        role1.style.color = "green"
+      }else {
+        role1.style.color = "red"
+        role1.innerHTML = "첫글자는 반드시 영문자로 시작해 영문자 숫자 포함 4~12자로입력하시오"
+      }
+    });
+    ct2.addEventListener("input", function(){
+        let regExp2 = /^[!-~]{8,15}$/;
+      if (regExp2.test(ct2.value)) {
+        role2.innerHTML = "사용 가능한 비밀번호입니다!";
+        role2.style.color = "green"
+      }else {
+        role2.style.color = "red"
+        role2.innerHTML = "영문자, 숫자, 특수문자 포함하여 총 8~15자로 입력하시오."
+      }
+    });
+    ct3.addEventListener("input", function(){
+      if (ct3.value == ct2.value) {
+        role3.innerHTML = "일치합니다!";
+        role3.style.color = "green"
+      }else {
+        role3.style.color = "red"
+        role3.innerHTML = "일치하지가 않습니다!"
+      }
+    });
+    ct4.addEventListener("input", function(){
+        let regExp3 = /^[가-힣]{2,}$/;
+      if (regExp3.test(ct4.value)) {
+        role4.innerHTML = ""
+      }else {
+        role4.style.color = "red"
+        role4.innerHTML = "사용할 수 없는 이름입니다"
+      }
+    });
+    ct5.addEventListener("input", function(){
+        let regExp4 = /^[a-z0-9]+@[a-z]{1,}.(com|net)$/;
+      if (regExp4.test(ct5.value)) {
+        role5.innerHTML = ""
+      }else {
+        role5.innerHTML="이메일 형식에 맞춰서 입력하시오."
+      }
+    });
+    reset.addEventListener("click", function(){
+        ct1.innerHTML=""
+        ct2.innerHTML=""
+        ct3.innerHTML=""
+        ct4.innerHTML=""
+        ct5.innerHTML=""
+        ct6.innerHTML=""
+        role1.innerHTML=""
+        role2.innerHTML=""
+        role3.innerHTML=""
+        role4.innerHTML=""
+        role5.innerHTML=""
+    });
+     
+    </script>
+  </body>
+</html>
