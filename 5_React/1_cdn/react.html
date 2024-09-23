@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      let count = 0;
+      const setCount = () => {
+        count++;
+        const h1 = React.createElement("h1", null, "Total Clicks : " + count);
+        const button = React.createElement(
+          "button",
+          { onClick: setCount },
+          "click"
+        );
+        const div = React.createElement("div", null, h1, button);
+        // 첫번째는 만들고자 하는 태그, 두번째는 attribute, 세번째는 넣고자하는 실제 값?
+        ReactDOM.render(div, root);
+      };
+      const root = document.querySelector("#root");
+      const h1 = React.createElement("h1", null, "Total Clicks : " + count);
+      const button = React.createElement(
+        "button",
+        { onClick: setCount },
+        "click"
+      );
+      const div = React.createElement("div", null, h1, button);
+      ReactDOM.render(div, root);
+    </script>
+  </body>
+</html>

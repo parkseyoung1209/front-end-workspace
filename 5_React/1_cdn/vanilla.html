@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Total Clicks : <span>0</span></h1>
+    <button onclick="setCount()">Click!</button>
+
+    <script>
+      let num = 0;
+      const count = document.querySelector("span");
+      /*const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        num++;
+        count.textContent = num;
+      });*/
+      const setCount = () => {
+        num++;
+        count.textContent = num;
+        // Or count.textContent = parseInt(count.textContent + 1); 도 가능
+      };
+    </script>
+  </body>
+</html>
