@@ -11,6 +11,7 @@
   "description": "",
   "type": "module",
   "dependencies": {
-    "loadsh": "^0.0.4"
+    "loadsh": "^0.0.4",
+    "lodash": "^4.17.21"
   }
 }
