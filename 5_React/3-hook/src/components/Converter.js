@@ -2,10 +2,10 @@ import { useState, useRef, useEffect } from "react";
 
 const Converter = () => {
   const [input, setInput] = useState("");
+  const [output, setOutput] = useState("");
   const [mnh, setMnh] = useState("Minutes => Hours");
   const [title, setTitle] = useState(["Minutes", "Hours"]);
   const [logic, setLogic] = useState(true);
-  const [output, setOutput] = useState("");
 
   const write = (event) => {
     setInput(event.target.value);
@@ -19,23 +19,21 @@ const Converter = () => {
     setInput("");
     setOutput("");
   };
+  const myfunc = () => {
+    setLogic(false);
+    setInput(output);
+    setOutput(input);
+    const newTitle = [...title];
+    [newTitle[0], newTitle[1]] = [newTitle[1], newTitle[0]];
+    setTitle(newTitle);
+  };
   const change = () => {
     if (logic == true) {
       setMnh("Hours => Minutes");
-      setLogic(false);
-      setInput(output);
-      setOutput(input);
-      const newTitle = [...title];
-      [newTitle[0], newTitle[1]] = [newTitle[1], newTitle[0]];
-      setTitle(newTitle);
+      myfunc();
     } else {
       setMnh("Minutes => Hours");
-      setLogic(true);
-      setInput(output);
-      setOutput(input);
-      const newTitle = [...title];
-      [newTitle[0], newTitle[1]] = [newTitle[1], newTitle[0]];
-      setTitle(newTitle);
+      myfunc();
     }
   };
   return (
