@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import Btn from "./Btn";
 
-const Btn = (props) => {
-  return <button onClick={props.click}>{props.text}</button>;
-};
 const Counter = () => {
   const [count, setCount] = useState(0);
   const updateCheckRef = useRef(false);
@@ -41,7 +39,7 @@ const Counter = () => {
   return (
     <div>
       <h1>Total Clicks : {count}</h1>
-      <Btn click={plus} text="+10" />
+      <Btn click={plus} text="+10" id="test" />
       <Btn click={minus} text="-10" />
       <Btn click={reset} text="reset" />
     </div>
