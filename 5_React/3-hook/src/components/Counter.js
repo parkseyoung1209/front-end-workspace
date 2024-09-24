@@ -39,7 +39,7 @@ const Counter = () => {
   return (
     <div>
       <h1>Total Clicks : {count}</h1>
-      <Btn click={plus} text="+10" id="test" />
+      <Btn click={plus} text="+10" />
       <Btn click={minus} text="-10" />
       <Btn click={reset} text="reset" />
     </div>

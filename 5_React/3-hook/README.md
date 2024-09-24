@@ -29,3 +29,13 @@ useEffect(콜백함수, [의존성 배열]);
 ```
 
 - 의존성 배열 요소에 값이 변회되는 시점에 콜백 함수가 실행된다.
+
+## useRef
+
+```js
+import { useRef } from "react";
+
+const 변수 = useRef();
+```
+
+- DOM 요소들을 직접 조작할 수 있다. Reference의 줄임말로 참조라는 뜻이다.

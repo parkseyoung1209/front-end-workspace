@@ -1,9 +1,9 @@
-import Counter from "./components/Counter";
+import Converter from "./components/Converter.js";
 
 const App = () => {
   return (
     <>
-      <Counter />
+      <Converter></Converter>
     </>
   );
 };
