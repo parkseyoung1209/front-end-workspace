@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const Converter = () => {
+/*const Converter = () => {
   const [input, setInput] = useState("");
   const [output, setOutput] = useState("");
   const [mnh, setMnh] = useState("Minutes => Hours");
@@ -52,5 +52,38 @@ const Converter = () => {
     </>
   );
 };
+쓰레기 코드
+*/ 
 
+const Converter = () => {
+  let [text, setText] = useState("Minutes => Hours");
+  const [bool, setBool] = useState(false);
+  const [number, setNumber] = useState('');
+  const invert = () => {
+      setBool(!bool);
+      reset();
+  };
+  const change = (e) => {
+      setNumber(e.target.value);
+  }
+  const reset = () => {
+      setNumber('');
+  }
+  useEffect(() => {
+      if(bool) {
+          setText("Hours => Minutes");
+      } else {
+          setText("Minutes => Hours");
+      }
+  }, [bool]);
+  return (
+      <>
+        <h1>Time Converter</h1>
+        <p>Minutes : <input type="number" value={bool ? number *60 : number} onChange={change} placeholder="Minutes" disabled={bool}/></p>
+        <p>Hours : <input type="number" value={bool ? number : Math.floor(number/60)} onChange={change} placeholder="Hours" disabled={!bool}/></p>
+        <button  onClick={reset}>Reset</button>
+        <button onClick={invert}>{text}</button>
+      </>
+    );
+}
 export default Converter;
